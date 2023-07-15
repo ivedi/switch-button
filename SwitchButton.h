@@ -14,10 +14,12 @@ class SwitchButton
     byte buttonPin;
     bool pressed;
     void begin();
-    bool update(byte debounceTime = 50);
+    bool update(byte debounceTime);
   private:
     int _currentState;
     int _lastFlickerableState;
     int _lastSteadyState;
     unsigned long _lastDebounceTime;
-}
+};
+
+#endif
