@@ -1,0 +1,6 @@
+SwitchButton  KEYWORD1
+buttonPin KEYWORD1
+pressed KEYWORD1
+
+begin KEYWORD2
+update  KEYWORD2
