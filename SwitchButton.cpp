@@ -19,7 +19,7 @@ void SwitchButton::begin() {
   pinMode(buttonPin, INPUT_PULLUP);
 }
 
-bool SwitchButton::update(byte debounceTime = 50) {
+bool SwitchButton::update(byte debounceTime) {
   bool stateChanged = false;
   // read the state of the button
   _currentState = digitalRead(buttonPin);
