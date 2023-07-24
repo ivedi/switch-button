@@ -9,6 +9,7 @@
 SwitchButton::SwitchButton(byte pin) {
   buttonPin = pin;
   pressed = false;
+  released = true;
   _currentState = LOW;
   _lastFlickerableState = LOW;
   _lastSteadyState = LOW;
@@ -43,9 +44,11 @@ bool SwitchButton::update(byte debounceTime) {
     // if the button has changed:
     if (_lastSteadyState == HIGH && _currentState == LOW) {
       pressed = true;
+      released = false;
       stateChanged = true;
     } else if (_lastSteadyState == LOW && _currentState == HIGH) {
       pressed = false;
+      released = true;
       stateChanged = true;
     }
 

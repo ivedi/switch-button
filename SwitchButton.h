@@ -13,6 +13,7 @@ class SwitchButton
     SwitchButton(byte buttonPin);
     byte buttonPin;
     bool pressed;
+    bool released;
     void begin();
     bool update(byte debounceTime = 50);
   private:
